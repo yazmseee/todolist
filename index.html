@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Мои планы</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page">
+    <header class="page__header header">
+        <h1 class="visually-hidden">Мои планы на неделю</h1>
+    </header>
+    <main class="page__main main">
+        <div class="main__wraper">
+            <section class="main__add add">
+                <h2 class="add__title">Добавить новую задачу</h2>
+                <form class="add__form" method="post" action="#" enctype="text/plain">
+                    <label class="add__task-label">
+						<span aria-hidden="true">*</span> Название
+						<input class="add__task-input" name="task" type="text" aria-required="true" autofocus required>
+					</label>
+                    <label class="add__desc-label">
+						<span aria-hidden="true">*</span> Описание
+						<textarea class="add__desc-input" name="description"></textarea>
+					</label>
+                    <button class="add__submit" type="submit">Добавить</button>
+                </form>
+            </section>
+            <section class="main__task task">
+                <h2 class="task__title">Список задач</h2>
+                <ul class="task__list"></ul>
+                <p class="task__empty-text">Список пуст...</p>
+            </section>
+        </div>
+    </main>
+    <footer class="page__footer footer">
+        <p class="footer__copy">&copy; 2020</p>
+    </footer>
+    <!-- <script src="js/jquery-3.5.0.min.js"></script> -->
+    <!-- <script src="js/main-jq.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

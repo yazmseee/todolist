@@ -1,0 +1,271 @@
+:root {
+    font-size: 16px;
+    line-height: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.display-none {
+    display: none;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Arial", sans-serif;
+    background-color: #f5f5f5;
+}
+
+.page__footer {
+    margin-top: auto;
+}
+
+.main__wraper {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-between;
+    width: 68%;
+    padding: 5% 0;
+    margin: 0 auto;
+}
+
+.main__add {
+    flex: 0 1 48.6%;
+}
+
+.add__title {
+    margin: 0 0 1.5em 0;
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+.add__form {
+    padding: 2em;
+    background-color: #fff;
+}
+
+.add__task-label,
+.add__desc-label {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 2em;
+    color: #8d92af;
+}
+
+.add__task-label {
+    margin-bottom: 1em;
+}
+
+.add__desc-label {
+    margin-bottom: 1.5em;
+}
+
+.add__task-input,
+.add__desc-input {
+    width: 100%;
+    padding: 0.5em 0.5em;
+    font-size: 1rem;
+    background-color: #fcfcfc;
+    border: 1px solid #f7f7f7;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.add__desc-input {
+    min-height: 15em;
+    resize: none;
+}
+
+.add__task-input:hover,
+.add__desc-input:hover {
+    box-shadow: 1px 1px 0.3em #f3f3f3 inset;
+}
+
+.add__task-input:focus,
+.add__desc-input:focus {
+    outline: 2px solid #2174fe;
+}
+
+.add__task-input:invalid {
+    background-color: cornsilk;
+}
+
+.add__task-input:invalid:focus {
+    outline: 2px solid lightsalmon;
+}
+
+.add__task-input:valid:focus {
+    background-color: mintcream;
+    outline: 2px solid limegreen;
+}
+
+.add__submit {
+    margin: 0;
+    padding: 1em 3.5em;
+    color: #fff;
+    background-color: #2174fe;
+    border: none;
+}
+
+.add__submit:focus,
+.add__submit:hover {
+    color: white;
+    background-color: black;
+    outline: none;
+}
+
+.main__task {
+    flex: 0 1 48.6%;
+}
+
+.task__title {
+    margin: 0 0 1.5em 0;
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+.task__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.task__item {
+    margin-bottom: 5%;
+    background-color: #fff;
+}
+
+.task__empty-text {
+    padding: 2em 0 0 0.5em;
+    font-size: 0.875rem;
+    color: #8d92af;
+    background-color: transparent;
+}
+
+.task__article-header {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0.5em;
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.task__article-title {
+    margin: 0 0.3em 0 0;
+    font-size: 1rem;
+    font-weight: normal;
+    overflow-wrap: anywhere;
+}
+
+.task__article-delete {
+    align-self: flex-start;
+    min-height: 1.25em;
+    min-width: 1.25em;
+    margin-right: 0.3em;
+    background-color: #fff;
+    background-image: url("../img/cross.svg");
+    background-size: 50% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.task__article-hide {
+    align-self: flex-end;
+    min-height: 1.25em;
+    min-width: 1.25em;
+    margin-left: auto;
+    background-color: #fff;
+    background-image: url("../img/triangle.svg");
+    background-size: 40% 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    transition-property: transform;
+    transition-duration: 300ms;
+}
+
+.task__article-delete:focus,
+.task__article-hide:focus {
+    outline: 2px solid #2174fe;
+}
+
+.task__article-desc-wrap {
+    overflow: hidden;
+    transition-property: max-height;
+    transition-duration: 300ms;
+}
+
+.task__article-desc {
+    padding: 0.5em 1em;
+    margin: 0;
+    font-size: 0.875rem;
+    color: #8d92af;
+    overflow-wrap: anywhere;
+}
+
+.footer {
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .main__wraper {
+        width: 84%;
+    }
+}
+
+@media (max-width: 900px) {
+    .main__wraper {
+        width: 90%;
+    }
+    .main__add {
+        margin-bottom: 3em;
+    }
+    .add__submit {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .main__wraper {
+        display: block;
+        width: 98%;
+        padding: 1em 0;
+    }
+    .main__add {
+        margin-bottom: 1em;
+    }
+    .add__form {
+        padding: 1em;
+    }
+    .add__submit {
+        width: 100%;
+        padding: 1em 1.5em;
+        font-size: 0.9rem
+    }
+    .task__title,
+    .add__title {
+        padding: 0.5em;
+        margin-bottom: 0.5em;
+    }
+}
